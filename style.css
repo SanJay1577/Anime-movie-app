@@ -1,0 +1,136 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("backgroud.jpg");
+  background-size: cover;
+
+}
+#head-container{
+
+     
+    display:flex;
+    padding:10px;
+    margin:10px;;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+
+}
+#movie-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    margin:0px;
+    padding:0px;
+ }
+
+ #movie-card{
+   display:grid;
+   grid-template-columns: 300px;
+   grid-template-rows: 300px 125px 200px;
+   grid-template-areas: "image" "text" "stats";
+
+   font-family: roboto;
+   border-radius: 18px;
+   background:rgb(15, 15, 15);
+   box-shadow: 5px 5px 15px rgb(10, 0, 0);
+   text-align: center;
+   margin:15px;
+   padding:5px;
+   transition: 0.5s ease;
+   cursor:pointer;
+   color:white;
+ }
+ .card-img{
+     grid-area: image;
+     border-top-left-radius:15px;
+     border-top-right-radius:15px;
+     background-size:cover;
+
+ }
+.card-text{
+      grid-area:text;
+      margin:25px;
+
+ }
+.card-text h3{
+
+    padding :5px;
+}
+ .card-stats{
+     grid-area:stats;
+
+ }
+ .card-stats .stat{
+     display: flex;
+     align-items:center;
+     justify-content:center;
+     flex-direction: row;
+ }
+
+ #movie-card:hover{
+     transform:scale(1.2);
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+ }
+ .card-stats .foot{
+   background-color:rgba(221, 161, 11, 0.829);
+   border-bottom-left-radius:15px;
+   border-bottom-right-radius:15px; padding:5px;
+ }
+ .center-space{
+     display:flex;
+     flex-wrap: wrap;
+     margin-top:200px;
+     width:500px; 
+     padding:10px;
+     border-radius:15px;
+     border:1px;
+     margin-bottom:15px ;
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+     cursor:pointer;
+     transition: 0.3s ease;
+ }
+
+ .center-space:hover{
+    transform:scale(1.2);
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+ }
+ .center-button{
+     border:none;
+     padding:10px;
+     background-color: black;
+     color:white;
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+     border-radius: 15px;
+     cursor:pointer;
+ }
+#back-btn{
+    border:none;
+    padding:10px;
+    background-color: black;
+    color:white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    border-radius: 15px;
+    cursor:pointer;
+    margin-bottom:5px;
+}
+#heading{
+    color:white;
+    text-shadow: 5px 5px 15px rgb(223, 215, 215);
+}
+
+#default-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+ @media  (max-width: 600px) {
+    .center-space {
+        width:280px;
+    }
+  }
